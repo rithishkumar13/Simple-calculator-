@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+
+int main(){
+    float num1,num2;
+    float result;
+    char operator;
+     while(1){
+        printf("**Menu** + =addition\n - = subtraction\n * =multiplication\n / = division\n ^=power\n");
+ 
+        scanf("%c",&operator);
+        scanf("%f%f",&num1,&num2);
+        switch(operator){
+            case '+':
+                result=num1+num2; 
+                break;
+             
+            case'-':
+                result=num1-num2;
+                break;
+            
+            case'*':
+                result=num1*num2;
+                break;
+            
+            case'/':
+                result=num1/num2;
+                break;
+            case '^':
+                result=pow(num1,num2);
+                break;
+            default:goto fail;
+            
+        }
+    
+        printf("%f=%f%c%f\n",result,num1,operator,num2);
+        fail:
+        printf("Fail\n");
+     }
+    
+    return 0;
+}
