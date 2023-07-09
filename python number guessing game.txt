@@ -1,0 +1,11 @@
+from random import*
+number=randint(1,101)
+guess=0
+while guess!=number:
+    guess=int(input("Enter your number:\n"))
+    if guess>number:
+        print("Your guess is high!..guess low")
+    elif guess<number:
+        print("Your guess is low!..guess high")
+    else:
+        print("Your guess is correct")
